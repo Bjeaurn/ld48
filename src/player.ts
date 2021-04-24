@@ -11,6 +11,8 @@ export class Player {
   image: ImageAsset
   x: number = 144
   y: number = 50
+  width: number = 26
+  height: number = 12
   speed = 0.4
   constructor() {
     this.image = Gine.store.get("dwarf")
