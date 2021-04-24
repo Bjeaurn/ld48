@@ -9,8 +9,7 @@ export class Map {
   map: number[]
   entities: any[]
   constructor() {
-    this.map = level0.map
-    this.entities = level0.entities
+    this.loadLevel(0)
   }
 
   getPosXY(x: number, y: number): number {
