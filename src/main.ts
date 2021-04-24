@@ -12,7 +12,7 @@ const cfg: Config = new Config(
 )
 const game = new Gine(cfg)
 
-Gine.store.image("dwarf", "assets/dwarf.png", {})
+Gine.store.image("dwarf", "dwarf.png", {})
 
 console.log(Gine.store.getImage("dwarf"))
 const mainScene = new MainScene()
