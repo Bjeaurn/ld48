@@ -1,6 +1,7 @@
 import { Gine, Scene } from 'gine'
 import { filter, map, tap } from 'rxjs/operators'
 
+import { Dialog } from '../dialog'
 import { Map } from './../map'
 import { Player } from './../player'
 import { World } from './../world'
@@ -15,6 +16,9 @@ export class MainScene extends Scene {
   constructor() {
     super()
     this.world.init()
+    new Dialog(
+      "Well hello there my fine viewers in the chat, how are you doing?"
+    )
 
     Gine.mouse.mouse$
       .pipe(
@@ -95,6 +99,7 @@ export class MainScene extends Scene {
   frame() {
     this.world.draw()
     this.player.draw()
+    Dialog.drawAll()
   }
 
   second() {
@@ -106,5 +111,6 @@ export class MainScene extends Scene {
   tick(deltaTime: number) {
     this.checkEntities()
     this.player.tick(deltaTime)
+    Dialog.tickAll(deltaTime)
   }
 }
