@@ -1,0 +1,13 @@
+{
+    "entities": [
+        {
+            "x": 7,
+            "y": 2,
+            "goTo": 2,
+            "setX": 248,
+            "setY": 116,
+            "type": "ladder-up"
+        }
+    ],
+    "map": []
+}

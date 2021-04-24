@@ -1,4 +1,5 @@
 import { Gine, Scene } from 'gine'
+import { filter, map, tap } from 'rxjs/operators'
 
 import { Map } from './../map'
 import { Player } from './../player'
@@ -10,16 +11,43 @@ export class MainScene extends Scene {
   player: Player = new Player()
   map: Map = new Map()
   world: World = new World(this.map)
+
   constructor() {
     super()
     this.world.init()
+
+    Gine.mouse.mouse$
+      .pipe(
+        filter((a) => a.type === "mousedown"),
+        tap((a) => {
+          if (a.button === 1) {
+            this.map.entities = this.map.entities.filter(
+              (b) =>
+                b.x !== Math.floor(a.x / Gine.CONFIG.tileSize) ||
+                b.y !== Math.floor(a.y / Gine.CONFIG.tileSize)
+            )
+          } else {
+            this.map.entities.push({
+              x: Math.floor(a.x / Gine.CONFIG.tileSize),
+              y: Math.floor(a.y / Gine.CONFIG.tileSize),
+              type: a.button === 0 ? "rock" : "ladder-down",
+            })
+          }
+        })
+      )
+      .subscribe()
+
+    Gine.keyboard.key$
+      .pipe(
+        filter((a) => a.type === "keyup"),
+        filter((a) => a.key === "z"),
+        tap(() => console.log(JSON.stringify(this.map.entities)))
+      )
+      .subscribe()
   }
 
   switchLevel(level: number = 0) {
-    this.map = new Map()
-    if (level === 1) {
-      this.map.loadLevel(1)
-    }
+    this.map.loadLevel(level)
     this.world = new World(this.map)
   }
 
@@ -33,7 +61,11 @@ export class MainScene extends Scene {
       h: this.player.height,
     }
     this.map.entities.forEach((e) => {
-      if (e.goTo && this.player.isPlayerOnTile(e.x, e.y)) {
+      if (e.goTo >= 0 && this.player.isPlayerOnTile(e.x, e.y)) {
+        if (e.setX >= 0 && e.setY >= 0) {
+          this.player.x = e.setX
+          this.player.y = e.setY
+        }
         this.switchLevel(e.goTo)
       }
       if (e.type === "rock") {
