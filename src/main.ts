@@ -1,4 +1,4 @@
-import { Config, DEFAULT_CONFIG, Gine, IConfigArguments } from 'gine'
+import { Config, DEFAULT_CONFIG, Gine, IConfigArguments, SpriteOptions } from 'gine'
 
 import { MainScene } from './scenes/main'
 
@@ -13,8 +13,10 @@ const cfg: Config = new Config(
 const game = new Gine(cfg)
 
 Gine.store.image("dwarf", "dwarf.png", {})
+Gine.store.sprite("world", "world.png", new SpriteOptions(32, 32, 5))
 
-console.log(Gine.store.getImage("dwarf"))
 const mainScene = new MainScene()
 game.changeScene(mainScene)
+Gine.keyboard.key$.subscribe()
+
 game.start()
