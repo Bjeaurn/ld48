@@ -38,7 +38,7 @@
             "y": 1,
             "goTo": 5,
             "setX": 272,
-            "setY": 75,
+            "setY": 80,
             "type": "ladder-up"
         },
         {
@@ -46,7 +46,7 @@
             "y": 1,
             "goTo": 5,
             "setX": 109,
-            "setY": 75,
+            "setY": 80,
             "type": "ladder-up"
         },
         {
