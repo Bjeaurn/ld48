@@ -1,4 +1,86 @@
 {
-    "entities": [],
+    "entities": [
+        {
+            "x": 8,
+            "y": 1,
+            "goTo": 6,
+            "setX": 272,
+            "setY": 77,
+            "type": "ladder-down"
+        },
+        {
+            "x": 3,
+            "y": 1,
+            "goTo": 6,
+            "setX": 109,
+            "setY": 77,
+            "type": "ladder-down"
+        },
+        {
+            "x": 5,
+            "y": 0,
+            "type": "rock"
+        },
+        {
+            "x": 5,
+            "y": 1,
+            "type": "rock"
+        },
+        {
+            "x": 5,
+            "y": 2,
+            "type": "rock"
+        },
+        {
+            "x": 5,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 5,
+            "y": 4,
+            "type": "rock"
+        },
+        {
+            "x": 5,
+            "y": 4,
+            "type": "rock"
+        },
+        {
+            "x": 5,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 5,
+            "y": 6,
+            "type": "rock"
+        },
+        {
+            "x": 4,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 3,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 2,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 7,
+            "y": 5,
+            "type": "ladder-down"
+        },
+        {
+            "x": 1,
+            "y": 5,
+            "type": "ladder-down"
+        }
+    ],
     "map": []
 }

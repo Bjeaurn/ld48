@@ -15,7 +15,7 @@ export class Map {
   map: number[]
   entities: any[]
   constructor() {
-    this.loadLevel(4)
+    this.loadLevel(6)
   }
 
   getPosXY(x: number, y: number): number {

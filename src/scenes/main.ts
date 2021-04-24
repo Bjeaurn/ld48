@@ -98,8 +98,7 @@ export class MainScene extends Scene {
   }
 
   second() {
-    // console.log(this.player.getTilePosition())
-    // console.log(this.player.x, this.player.y)
+    console.log(this.player.getTilePosition(), this.player.x, this.player.y)
     // console.log({ x: 3 * 32, y: 4 * 32, xw: 3 * 32 + 32, yh: 4 * 32 + 32 })
     // console.log(this.player.isColliding)
   }

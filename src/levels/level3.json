@@ -67,16 +67,16 @@
             "x": 2,
             "y": 0,
             "goTo": 4,
-            "setX": 0,
-            "setY": 0,
+            "setX": 80,
+            "setY": 50,
             "type": "ladder-down"
         },
         {
             "x": 0,
             "y": 5,
             "goTo": 4,
-            "setX": 0,
-            "setY": 0,
+            "setX": 44,
+            "setY": 170,
             "type": "ladder-down"
         }
     ],
