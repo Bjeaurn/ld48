@@ -16,9 +16,9 @@ Gine.handle.handle.imageSmoothingEnabled = false
 Gine.store.image("dwarf", "dwarf.png", {})
 Gine.store.sprite("world", "world.png", new SpriteOptions(32, 32, 5, 3))
 Gine.store.image("rock", "rock.png")
-Gine.store.image("ladder", "ladder-down.png")
+Gine.store.image("ladder-up", "ladder-up.png")
+Gine.store.image("ladder-down", "ladder-down.png")
 const mainScene = new MainScene()
 game.changeScene(mainScene)
-Gine.keyboard.key$.subscribe()
 
 game.start()

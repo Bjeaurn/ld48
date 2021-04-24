@@ -40,8 +40,9 @@ export class World {
       if (e.x == null || e.y == null) {
         return
       }
+      let type = e.type
       Gine.handle.draw(
-        Gine.store.get(e.type),
+        Gine.store.get(type),
         e.x * Gine.CONFIG.tileSize,
         e.y * Gine.CONFIG.tileSize
       )
