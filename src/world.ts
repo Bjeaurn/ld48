@@ -8,7 +8,7 @@ export class World {
   private tilesY: number = Math.ceil(Gine.CONFIG.height / Gine.CONFIG.tileSize)
   constructor(private map: Map) {
     this.world = Gine.store.getSprite("world")
-    this.world.calculatePerIndex(0)
+    this.world.calculatePerIndex(3)
   }
 
   init() {}
@@ -21,14 +21,14 @@ export class World {
         if (p != undefined) {
           this.world.calculatePerIndex(p)
         } else {
-          this.world.calculatePerIndex(0)
+          this.world.calculatePerIndex(3)
         }
         Gine.handle.handle.drawImage(
           this.world.image,
           this.world.sourceX,
           this.world.sourceY,
           this.world.sizeX - 1,
-          this.world.sizeY - 1,
+          this.world.sizeY,
           i * Gine.CONFIG.tileSize,
           j * Gine.CONFIG.tileSize,
           this.world.sizeX,
