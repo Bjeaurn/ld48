@@ -36,5 +36,15 @@ export class World {
         )
       }
     }
+    this.map.entities.forEach((e) => {
+      if (e.x == null || e.y == null) {
+        return
+      }
+      Gine.handle.draw(
+        Gine.store.get(e.type),
+        e.x * Gine.CONFIG.tileSize,
+        e.y * Gine.CONFIG.tileSize
+      )
+    })
   }
 }

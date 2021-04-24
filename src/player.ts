@@ -1,12 +1,23 @@
 import { Gine, ImageAsset, KEYCODES } from 'gine'
 
 export class Player {
+  // top, right, bottom, left
+  isColliding: [boolean, boolean, boolean, boolean] = [
+    false,
+    false,
+    false,
+    false,
+  ]
   image: ImageAsset
   x: number = 144
   y: number = 50
   speed = 0.4
   constructor() {
     this.image = Gine.store.get("dwarf")
+  }
+
+  resetCollision() {
+    this.isColliding = [false, false, false, false]
   }
 
   getTilePosition(): { x: number; y: number } {
@@ -33,26 +44,33 @@ export class Player {
     this.handleKeyboard(deltaTime)
   }
 
+  preventMovingOffScreen() {
+    if (this.x < 0) this.x = 0
+    if (this.x > Gine.CONFIG.width) this.x = Gine.CONFIG.width
+    if (this.y < 0) this.y = 0
+    if (this.y > Gine.CONFIG.height) this.y = Gine.CONFIG.height
+  }
+
   handleKeyboard(deltaTime: number) {
     const vector = { x: 0, y: 0 }
-    if (Gine.keyboard.allPressed()[KEYCODES.D]) {
+    if (Gine.keyboard.allPressed()[KEYCODES.D] && !this.isColliding[1]) {
       vector.x += this.speed
     }
-    if (Gine.keyboard.allPressed()[KEYCODES.A]) {
+    if (Gine.keyboard.allPressed()[KEYCODES.A] && !this.isColliding[3]) {
       vector.x -= this.speed
     }
-    if (Gine.keyboard.allPressed()[KEYCODES.W]) {
+    if (
+      Gine.keyboard.allPressed()[KEYCODES.W] &&
+      this.isColliding[0] === false
+    ) {
       vector.y -= this.speed
     }
-    if (Gine.keyboard.allPressed()[KEYCODES.S]) {
+    if (Gine.keyboard.allPressed()[KEYCODES.S] && !this.isColliding[2]) {
       vector.y += this.speed
     }
 
     this.x += vector.x
     this.y += vector.y
-    if (this.x < 0) this.x = 0
-    if (this.x > Gine.CONFIG.width) this.x = Gine.CONFIG.width
-    if (this.y < 0) this.y = 0
-    if (this.y > Gine.CONFIG.height) this.y = Gine.CONFIG.height
+    this.preventMovingOffScreen()
   }
 }
