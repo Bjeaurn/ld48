@@ -1,1 +1,3 @@
 .vscode/
+.parcel-cache/
+dist/
