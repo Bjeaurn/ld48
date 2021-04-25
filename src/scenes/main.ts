@@ -12,7 +12,7 @@ export class MainScene extends Scene {
   player: Player = new Player()
   map: Map = new Map()
   world: World = new World(this.map)
-
+  bestLevel: number = 0
   constructor() {
     super()
     this.world.init()
@@ -51,6 +51,18 @@ export class MainScene extends Scene {
   }
 
   switchLevel(level: number = 0) {
+    if (level === 10 && this.bestLevel < 10) {
+      this.bestLevel = 10
+      new Dialog("Oh you found us!", 7, 40, 95)
+      new Dialog("Our batteries died, can you show us the way?", 9, 30, 115)
+    }
+    if (level === 0 && this.bestLevel === 10) {
+      new Dialog("Well done! You deserve a promotion!", 8, 40, 115)
+      this.endGame()
+    }
+    if (level > this.bestLevel) {
+      this.bestLevel = level
+    }
     this.map.loadLevel(level)
     this.world = new World(this.map)
   }
@@ -96,6 +108,10 @@ export class MainScene extends Scene {
     })
   }
 
+  endGame() {
+    console.log("gg")
+  }
+
   frame() {
     this.world.draw()
     this.player.draw()
@@ -103,7 +119,7 @@ export class MainScene extends Scene {
   }
 
   second() {
-    console.log(this.player.getTilePosition(), this.player.x, this.player.y)
+    // console.log(this.player.getTilePosition(), this.player.x, this.player.y)
     // console.log({ x: 3 * 32, y: 4 * 32, xw: 3 * 32 + 32, yh: 4 * 32 + 32 })
     // console.log(this.player.isColliding)
   }

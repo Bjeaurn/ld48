@@ -51,6 +51,9 @@
         {
             "x": 2,
             "y": 3,
+            "goTo": 8,
+            "setX": 45,
+            "setY": 112,
             "type": "ladder-down"
         },
         {
@@ -64,6 +67,9 @@
         {
             "x": 2,
             "y": 0,
+            "goTo": 9,
+            "setX": 109,
+            "setY": 17,
             "type": "ladder-down"
         },
         {

@@ -1,4 +1,171 @@
 {
-    "entities": [],
+    "entities": [
+        {
+            "x": 2,
+            "y": 3,
+            "goTo": 7,
+            "setX": 39,
+            "setY": 107,
+            "type": "ladder-up"
+        },
+        {
+            "x": 7,
+            "y": 1,
+            "goTo": 9,
+            "setX": 205,
+            "setY": 50,
+            "type": "ladder-down"
+        },
+        {
+            "x": 7,
+            "y": 5,
+            "type": "ladder-down"
+        },
+        {
+            "x": 8,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 8,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 8,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 9,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 7,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 7,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 6,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 6,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 5,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 5,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 4,
+            "y": 3,
+            "type": "rock"
+        },
+        {
+            "x": 4,
+            "y": 4,
+            "type": "rock"
+        },
+        {
+            "x": 4,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 4,
+            "y": 6,
+            "type": "rock"
+        },
+        {
+            "x": 3,
+            "y": 6,
+            "type": "rock"
+        },
+        {
+            "x": 3,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 2,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 2,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 1,
+            "y": 6,
+            "type": "rock"
+        },
+        {
+            "x": 2,
+            "y": 6,
+            "type": "rock"
+        },
+        {
+            "x": 1,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 0,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 0,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 0,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 0,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "type": "rock"
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "type": "rock"
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "type": "rock"
+        },
+        {
+            "x": 5,
+            "y": 0,
+            "type": "rock"
+        }
+    ],
     "map": []
 }

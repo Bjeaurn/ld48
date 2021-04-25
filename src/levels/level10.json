@@ -1,4 +1,113 @@
 {
-    "entities": [],
+    "entities": [
+        {
+            "x": 7,
+            "y": 5,
+            "goTo": 9,
+            "setX": 240,
+            "setY": 141,
+            "type": "ladder-up"
+        },
+        {
+            "x": 9,
+            "y": 2,
+            "type": "rock"
+        },
+        {
+            "x": 7,
+            "y": 2,
+            "type": "rock"
+        },
+        {
+            "x": 8,
+            "y": 2,
+            "type": "rock"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "type": "rock"
+        },
+        {
+            "x": 5,
+            "y": 2,
+            "type": "rock"
+        },
+        {
+            "x": 2,
+            "y": 4,
+            "type": "rock"
+        },
+        {
+            "x": 1,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 2,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 2,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 2,
+            "y": 6,
+            "type": "rock"
+        },
+        {
+            "x": 0,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 3,
+            "y": 0,
+            "type": "rock"
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "type": "rock"
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "type": "rock"
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "type": "rock"
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "type": "rock"
+        },
+        {
+            "x": 9,
+            "y": 6,
+            "type": "rock"
+        },
+        {
+            "x": 8,
+            "y": 6,
+            "type": "rock"
+        },
+        {
+            "x": 9,
+            "y": 5,
+            "type": "rock"
+        },
+        {
+            "x": 2,
+            "y": 2,
+            "type": "dwarf-2"
+        }
+    ],
     "map": []
 }

@@ -31,7 +31,7 @@ export class Map {
   entities: any[]
   dialogs: any[]
   constructor() {
-    this.loadLevel(7)
+    this.loadLevel(0)
   }
 
   getPosXY(x: number, y: number): number {

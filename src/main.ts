@@ -14,6 +14,7 @@ const game = new Gine(cfg)
 Gine.handle.handle.imageSmoothingEnabled = false
 
 Gine.store.image("dwarf", "dwarf.png", {})
+Gine.store.image("dwarf-2", "dwarf-2.png", {})
 Gine.store.sprite("world", "world.png", new SpriteOptions(32, 32, 5, 3))
 Gine.store.image("rock", "rock.png")
 Gine.store.image("ladder-up", "ladder-up.png")
