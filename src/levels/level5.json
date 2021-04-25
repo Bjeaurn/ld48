@@ -74,11 +74,17 @@
         {
             "x": 7,
             "y": 5,
+            "goTo": 7,
+            "setX": 208,
+            "setY": 176,
             "type": "ladder-down"
         },
         {
             "x": 1,
             "y": 5,
+            "goTo": 7,
+            "setX": 86,
+            "setY": 176,
             "type": "ladder-down"
         }
     ],
