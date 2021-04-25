@@ -1,5 +1,5 @@
 import { Gine, Scene } from 'gine'
-import { filter, map, tap } from 'rxjs/operators'
+import { map } from 'rxjs/operators'
 
 import { Dialog } from '../dialog'
 import { Map } from './../map'
@@ -19,35 +19,6 @@ export class MainScene extends Scene {
 
     new Dialog("We lost contact with a team of miners.", 6, 20)
     new Dialog("You need to find them!", 9, 20, Gine.CONFIG.height / 2 + 20)
-
-    Gine.mouse.mouse$
-      .pipe(
-        filter((a) => a.type === "mousedown"),
-        tap((a) => {
-          if (a.button === 1) {
-            this.map.entities = this.map.entities.filter(
-              (b) =>
-                b.x !== Math.floor(a.x / Gine.CONFIG.tileSize) ||
-                b.y !== Math.floor(a.y / Gine.CONFIG.tileSize)
-            )
-          } else {
-            this.map.entities.push({
-              x: Math.floor(a.x / Gine.CONFIG.tileSize),
-              y: Math.floor(a.y / Gine.CONFIG.tileSize),
-              type: a.button === 0 ? "rock" : "ladder-down",
-            })
-          }
-        })
-      )
-      .subscribe()
-
-    Gine.keyboard.key$
-      .pipe(
-        filter((a) => a.type === "keyup"),
-        filter((a) => a.key === "z"),
-        tap(() => console.log(JSON.stringify(this.map.entities)))
-      )
-      .subscribe()
   }
 
   switchLevel(level: number = 0) {
@@ -116,12 +87,6 @@ export class MainScene extends Scene {
     this.world.draw()
     this.player.draw()
     Dialog.drawAll()
-  }
-
-  second() {
-    // console.log(this.player.getTilePosition(), this.player.x, this.player.y)
-    // console.log({ x: 3 * 32, y: 4 * 32, xw: 3 * 32 + 32, yh: 4 * 32 + 32 })
-    // console.log(this.player.isColliding)
   }
 
   tick(deltaTime: number) {
