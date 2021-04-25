@@ -22,5 +22,6 @@ Gine.store.image("ladder-down", "ladder-down.png")
 Gine.store.image("dialog", "dialog.png")
 const mainScene = new MainScene()
 game.changeScene(mainScene)
+Gine.keyboard.key$.subscribe()
 
 game.start()
