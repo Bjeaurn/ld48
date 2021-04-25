@@ -18,6 +18,7 @@ Gine.store.sprite("world", "world.png", new SpriteOptions(32, 32, 5, 3))
 Gine.store.image("rock", "rock.png")
 Gine.store.image("ladder-up", "ladder-up.png")
 Gine.store.image("ladder-down", "ladder-down.png")
+Gine.store.image("dialog", "dialog.png")
 const mainScene = new MainScene()
 game.changeScene(mainScene)
 

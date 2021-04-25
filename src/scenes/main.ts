@@ -16,9 +16,9 @@ export class MainScene extends Scene {
   constructor() {
     super()
     this.world.init()
-    new Dialog(
-      "Well hello there my fine viewers in the chat, how are you doing?"
-    )
+
+    new Dialog("We lost contact with a team of miners.", 6, 20)
+    new Dialog("You need to find them!", 9, 20, Gine.CONFIG.height / 2 + 20)
 
     Gine.mouse.mouse$
       .pipe(
